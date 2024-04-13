@@ -3,7 +3,6 @@
 """
 Created on Mon Apr  8 09:36:03 2024
 
-sudo /home/user1/PyEnv/bin/python3 ./ApexVirusKeylogger.py
 
 @author: CoderXYZ7
 """
