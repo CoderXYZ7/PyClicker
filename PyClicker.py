@@ -3,6 +3,8 @@
 """
 Created on Mon Apr  8 09:36:03 2024
 
+sudo /home/user1/PyEnv/bin/python3 ./ApexVirusKeylogger.py
+
 @author: CoderXYZ7
 """
 
@@ -42,6 +44,10 @@ def update_delay():
         delay_entry.delete(0, tk.END)
         delay_entry.insert(0, str(custom_delay))
 
+# Funzione per aggiornare il ritardo personalizzato quando viene premuto il pulsante
+def update_delay_button():
+    update_delay()
+
 # Creazione della finestra principale
 root = tk.Tk()
 root.title("Toggle Square")
@@ -70,7 +76,9 @@ delay_entry.pack()
 delay_entry.insert(0, str(custom_delay))
 delay_entry.bind("<Return>", lambda event: update_delay())
 
+# Creazione del pulsante per aggiornare il ritardo personalizzato
+update_delay_button = tk.Button(root, text="Update Delay", command=update_delay_button)
+update_delay_button.pack()
+
 # Avvio del mainloop
 root.mainloop()
-
-
